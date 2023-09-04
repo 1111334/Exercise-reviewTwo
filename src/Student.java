@@ -21,24 +21,12 @@ public class Student {
         return courseYear;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public static void printSeniorStudents(Student[] students) {
+        for (Student student : students) {
+            if (student.getCourseYear() == 3) {
+                System.out.println("Identificatore: " + student.getIdentifier());
+            }
+        }
     }
 
-    public void setIdentifier(long identifier) {
-        this.identifier = identifier;
-    }
-
-    public void setCourseYear(byte courseYear) {
-        this.courseYear = courseYear;
-    }
-
-    public void printSeniorStudents(Student[] arr) {
-       for (Student student : arr) {
-           if (student.getCourseYear() == 3) {
-               System.out.println("stampa identificativo: " + getIdentifier());
-           }
-       }
-
-    }
 }

@@ -1,15 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        Student[] students = new Student[3];
-        students[0] = new Student("Maicol", 37738, (byte) 2);
-        students[1] = new Student("Luca", 57674, (byte) 1);
-        students[2] = new Student("Francesco", 67485, (byte) 3);
+        // Alloca un array di 3 oggetti Student
+        Student[] studentArray = new Student[3];
+        studentArray[0] = new Student("Maicol", 1, (byte) 2);
+        studentArray[1] = new Student("Giuseppe", 2, (byte) 3);
+        studentArray[2] = new Student("Luca", 3, (byte) 3);
 
-        for (Student student : students) {
-            student.printSeniorStudents(students);
-            System.out.println("Name: " + student.getName());
+        // Chiama il metodo printSeniorStudents con l'array di studenti
+        Student.printSeniorStudents(studentArray);
+
+        // Stampa il valore dell'attributo "name" per ciascun elemento dell'array
+        for (Student student : studentArray) {
+            System.out.println("Nome: " + student.getName());
         }
+
 
     }
 }
